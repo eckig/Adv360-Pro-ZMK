@@ -3,59 +3,201 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
+#include "german-keymap.h"
+
+&caps_word {
+    continue-list = <UNDERSCORE>;
+};
 
 / {
     behaviors {
-      #include "macros.dtsi"
-
-      hm: homerow_mods {
-          compatible = "zmk,behavior-hold-tap";
-          label = "HOMEROW_MODS";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
-          flavor = "tap-preferred";
-          bindings = <&kp>, <&kp>;
-      };
+    
+    dtilde: dollar_tilde {
+        compatible = "zmk,behavior-mod-morph";
+        label = "dollar_tilde";
+        #binding-cells = <0>;
+        bindings = <&kp DE_DLR>, <&kp DE_TILD>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    pkp_n1: plus_kp_n1 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "plus_kp_n1";
+        #binding-cells = <0>;
+        bindings = <&kp DE_PLUS>, <&kp N1>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    lkp_n2: left_bracket_kp_n2 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "left_bracket_kp_n2";
+        #binding-cells = <0>;
+        bindings = <&kp DE_LBRC>, <&kp N2>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    lkp_n3: left_brace_kp_n3 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "left_brace_kp_n3";
+        #binding-cells = <0>;
+        bindings = <&kp DE_LCBR>, <&kp N3>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    lkp_n4: left_parenthesis_kp_n4 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "left_parenthesis_kp_n4";
+        #binding-cells = <0>;
+        bindings = <&kp DE_LPRN>, <&kp N4>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    akp_n5: amps_kp_n5 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "amps_kp_n5";
+        #binding-cells = <0>;
+        bindings = <&kp DE_AMPR>, <&kp N5>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ekp_n6: equal_kp_n6 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "equal_kp_n6";
+        #binding-cells = <0>;
+        bindings = <&kp DE_EQL>, <&kp N6>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    rkp_n7: right_parenthesis_kp_n7 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "right_parenthesis_kp_n7";
+        #binding-cells = <0>;
+        bindings = <&kp DE_RPRN>, <&kp N7>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    rkp_n8: right_brace_kp_n8 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "right_brace_kp_n8";
+        #binding-cells = <0>;
+        bindings = <&kp DE_RCBR>, <&kp N8>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    rkp_n9: right_bracket_kp_n9 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "right_bracket_kp_n9";
+        #binding-cells = <0>;
+        bindings = <&kp DE_RBRC>, <&kp N9>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    skp_n0: star_kp_n0 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "star_kp_n0";
+        #binding-cells = <0>;
+        bindings = <&kp DE_ASTR>, <&kp N0>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    eprcnt: excl_prcnt {
+        compatible = "zmk,behavior-mod-morph";
+        label = "excl_prcnt";
+        #binding-cells = <0>;
+        bindings = <&kp DE_EXLM>, <&kp DE_PERC>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    csemi: semi_colon {
+        compatible = "zmk,behavior-mod-morph";
+        label = "semi_colon";
+        #binding-cells = <0>;
+        bindings = <&kp DE_SCLN>, <&kp DE_COLN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    comlt: comma_lessthan {
+        compatible = "zmk,behavior-mod-morph";
+        label = "comma_lessthan";
+        #binding-cells = <0>;
+        bindings = <&kp DE_COMM>, <&kp DE_LABK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    dquot: quot_dquot {
+        compatible = "zmk,behavior-mod-morph";
+        label = "quot_dquot";
+        #binding-cells = <0>;
+        bindings = <&kp DE_QUOT>, <&kp DE_DQUO>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    dotrt: dot_greaterthan {
+        compatible = "zmk,behavior-mod-morph";
+        label = "dot_greaterthan";
+        #binding-cells = <0>;
+        bindings = <&kp DE_DOT>, <&kp DE_RABK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    grvpipe: grav_pipe {
+        compatible = "zmk,behavior-mod-morph";
+        label = "grav_pipe";
+        #binding-cells = <0>;
+        bindings = <&kp DE_PIPE>, <&kp DE_GRV>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    bkhash: backslash_hash {
+        compatible = "zmk,behavior-mod-morph";
+        label = "grave_grave";
+        #binding-cells = <0>;
+        bindings = <&kp DE_BSLS>, <&kp DE_HASH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    atcirc: at_circ {
+        compatible = "zmk,behavior-mod-morph";
+        label = "at_circ";
+        #binding-cells = <0>;
+        bindings = <&kp DE_AT>, <&kp DE_CIRC>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    questsls: slash_question {
+        compatible = "zmk,behavior-mod-morph";
+        label = "slash_question";
+        #binding-cells = <0>;
+        bindings = <&kp DE_SLSH>, <&kp DE_QUES>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    degeuro: euro_deg {
+        compatible = "zmk,behavior-mod-morph";
+        label = "euro_deg";
+        #binding-cells = <0>;
+        bindings = <&kp DE_EURO>, <&kp DE_DEG>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+};
 
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                        &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
-      >;
+        &dtilde   &pkp_n1  &lkp_n2  &lkp_n3  &lkp_n4   &akp_n5  &tog 1                                                                       &mo 3     &ekp_n6  &rkp_n7  &rkp_n8  &rkp_n9  &skp_n0  &eprcnt
+        &kp TAB   &csemi   &comlt   &dotrt   &kp DE_P  &kp DE_Y &none                                                                        &kp PSCRN &kp DE_F &kp DE_G &kp DE_C &kp DE_R &kp DE_L &questsls
+        &kp ESC   &kp DE_A &kp DE_O &kp DE_E &kp DE_U  &kp DE_I &caps_word      &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none     &kp DE_D &kp DE_H &kp DE_T &kp DE_N &kp DE_S &kp DE_MINS
+        &kp LSHFT &dquot   &kp DE_Q &kp DE_J &kp DE_K  &kp DE_X        &none    &none     &kp HOME &none &none &kp PG_UP &none     &none               &kp DE_B &kp DE_M &kp DE_W &kp DE_V &kp DE_Z &kp RSHFT
+        &mo 2     &grvpipe &bkhash  &kp LEFT &kp RIGHT                 &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE                    &kp UP   &kp DOWN &atcirc  &degeuro &mo 2
+        >;
     };
     keypad {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                        &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+        &trans &trans &trans &trans &trans &trans &trans                                                       &mo 3 &trans &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans
+        &trans &trans &trans &trans &trans &trans &none                                                        &none &trans &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &trans
+        &trans &trans &trans &trans &trans &trans &none         &trans &trans             &trans &trans        &none &trans &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &trans
+        &trans &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none        &trans &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &kp KP_N0           &trans     &trans       &trans        &trans          &mo 2
       >;
     };
     fn {
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                                       &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans &trans &trans &trans &trans  &none                                                       &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans  &none        &trans &trans             &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none        &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &trans              &trans &trans &trans  &trans  &trans
+        &kp F12 &kp F1    &kp F2    &kp F3 &kp F4    &kp F5 &tog 1                                                       &mo 3 &kp F6 &kp F7 &kp F8 &kp F9  &kp F10   &kp F11 
+        &trans  &trans    &trans    &trans &trans    &trans &none                                                        &none &trans &trans &trans &trans  &trans    &trans
+        &trans  &kp DE_AE &kp DE_OE &trans &kp DE_UE &trans &none         &trans &trans             &trans &trans        &none &trans &trans &trans &trans  &kp DE_SS &trans
+        &trans  &trans    &trans    &trans &trans    &trans        &none  &none  &trans &none &none &trans &none  &none        &trans &trans &trans &trans  &trans    &trans
+        &trans  &trans    &trans    &trans &trans                  &trans &trans &trans             &trans &trans &trans              &trans &trans &trans  &trans    &trans
       >;
     };
     mod {
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                          &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                                                                    &bootloader            &none        &none        &none        &none        &none        &none
-        &none &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5                 &bt BT_CLR &bt BT_CLR             &bt BT_CLR &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
-        &none &none        &none        &none        &none        &none                               &none           &none      &none      &none &none &none      &none      &none                                  &none        &none        &none        &none        &none        &none
-        &none &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                       &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                                                 &bootloader            &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5      &bt BT_CLR &bt BT_CLR             &bt BT_CLR &bt BT_CLR         &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none                    &none           &none      &none      &none &none &none      &none      &none                          &none        &none        &none        &none        &none        &none
+        &none &none        &none        &bl BL_INC   &bl BL_DEC                            &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                             &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
     };
   };
