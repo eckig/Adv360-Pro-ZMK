@@ -89,7 +89,7 @@
         bindings = <&kp DE_EURO>, <&kp DE_DEG>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    &qt {
+    qt {
         flavor = "balanced";
         tapping-term-ms = <200>;
         quick-tap-ms = <100>;
