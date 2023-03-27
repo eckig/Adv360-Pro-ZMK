@@ -20,80 +20,79 @@
     dtilde: dollar_tilde {
         compatible = "zmk,behavior-mod-morph";
         label = "dollar_tilde";
+        #binding-cells = <0>;
         bindings = <&kp DE_DLR>, <&kp DE_TILD>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     eprcnt: excl_prcnt {
         compatible = "zmk,behavior-mod-morph";
         label = "excl_prcnt";
+        #binding-cells = <0>;
         bindings = <&kp DE_EXLM>, <&kp DE_PERC>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     csemi: semi_colon {
         compatible = "zmk,behavior-mod-morph";
         label = "semi_colon";
+        #binding-cells = <0>;
         bindings = <&kp DE_SCLN>, <&kp DE_COLN>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     comlt: comma_lessthan {
         compatible = "zmk,behavior-mod-morph";
         label = "comma_lessthan";
+        #binding-cells = <0>;
         bindings = <&kp DE_COMM>, <&kp DE_LABK>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     dquot: quot_dquot {
         compatible = "zmk,behavior-mod-morph";
         label = "quot_dquot";
+        #binding-cells = <0>;
         bindings = <&kp DE_QUOT>, <&kp DE_DQUO>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     dotrt: dot_greaterthan {
         compatible = "zmk,behavior-mod-morph";
         label = "dot_greaterthan";
+        #binding-cells = <0>;
         bindings = <&kp DE_DOT>, <&kp DE_RABK>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     grvpipe: grav_pipe {
         compatible = "zmk,behavior-mod-morph";
         label = "grav_pipe";
+        #binding-cells = <0>;
         bindings = <&kp DE_PIPE>, <&kp DE_GRV>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     bkhash: backslash_hash {
         compatible = "zmk,behavior-mod-morph";
         label = "grave_grave";
+        #binding-cells = <0>;
         bindings = <&kp DE_BSLS>, <&kp DE_HASH>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     atcirc: at_circ {
         compatible = "zmk,behavior-mod-morph";
         label = "at_circ";
+        #binding-cells = <0>;
         bindings = <&kp DE_AT>, <&kp DE_CIRC>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     questsls: slash_question {
         compatible = "zmk,behavior-mod-morph";
         label = "slash_question";
+        #binding-cells = <0>;
         bindings = <&kp DE_SLSH>, <&kp DE_QUES>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     degeuro: euro_deg {
         compatible = "zmk,behavior-mod-morph";
         label = "euro_deg";
+        #binding-cells = <0>;
         bindings = <&kp DE_EURO>, <&kp DE_DEG>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    qtbs {
-        flavor = "balanced";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <100>;
-        bindings = <&mo>, <&kp SPACE>;
-    };
-    qtsp {
-        flavor = "balanced";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <100>;
-        bindings = <&mo>, <&kp BSPC>;
     };
 };
 
