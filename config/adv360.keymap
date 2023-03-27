@@ -205,7 +205,7 @@
         &trans &trans      &trans      &trans      &trans      &trans      &trans                                                       &trans &trans      &trans      &trans      &trans      &trans    &trans
         &trans &kp DE_QUOT &kp DE_LABK &kp DE_RABK &kp DE_DQUO &kp DE_DOT  &trans                                                       &trans &kp DE_AMPR &kp DE_LBRC &kp DE_RBRC &kp DE_DLR  &kp DE_AE &trans
         &trans &kp DE_EXLM &kp DE_MINS &kp DE_PLUS &kp DE_EQL  &kp DE_HASH &trans        &trans &trans             &trans &trans        &trans &kp DE_PIPE &kp DE_LPRN &kp DE_RPRN &kp DE_QUES &kp DE_OE &trans
-        &trans &DE_CIRC    &kp DE_SLSH &kp DE_ASTR &kp DE_BSLS &trans             &trans &trans &trans &none &none &trans &trans &trans        &kp DE_TILD &kp DE_LCBR &kp DE_RCBR &kp DE_PERC &kp DE_UE &trans
+        &trans &kp DE_CIRC &kp DE_SLSH &kp DE_ASTR &kp DE_BSLS &trans             &trans &trans &trans &none &none &trans &trans &trans        &kp DE_TILD &kp DE_LCBR &kp DE_RCBR &kp DE_PERC &kp DE_UE &trans
         &trans &trans      &trans      &trans      &trans                         &trans &trans &trans             &trans &trans &trans                    &trans      &trans      &trans      &kp DE_SS &trans
         >;
     };
