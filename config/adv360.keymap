@@ -9,14 +9,6 @@
     continue-list = <UNDERSCORE>;
 };
 
-&qt {
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <100>;
-};
-#define SYM_BSPC &qt &mo 4 BSPC
-#define SYM_SPAC &qt &mo 4 SPACE
-
 / {
     behaviors {
  
@@ -97,7 +89,15 @@
         bindings = <&kp DE_EURO>, <&kp DE_DEG>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    &qt {
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <100>;
+    };
 };
+
+#define SYM_BSPC &qt &mo 4 BSPC
+#define SYM_SPAC &qt &mo 4 SPACE
 
   keymap {
     compatible = "zmk,keymap";
