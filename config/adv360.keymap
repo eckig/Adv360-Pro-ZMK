@@ -9,6 +9,14 @@
     continue-list = <UNDERSCORE>;
 };
 
+&qt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <100>;
+};
+#define SYM_BSPC &qt &mo 4 BSPC
+#define SYM_SPAC &qt &mo 4 SPACE
+
 / {
     behaviors {
  
@@ -17,76 +25,6 @@
         label = "dollar_tilde";
         #binding-cells = <0>;
         bindings = <&kp DE_DLR>, <&kp DE_TILD>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    pkp_n1: plus_kp_n1 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "plus_kp_n1";
-        #binding-cells = <0>;
-        bindings = <&kp DE_PLUS>, <&kp N1>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    lkp_n2: left_bracket_kp_n2 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "left_bracket_kp_n2";
-        #binding-cells = <0>;
-        bindings = <&kp DE_LBRC>, <&kp N2>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    lkp_n3: left_brace_kp_n3 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "left_brace_kp_n3";
-        #binding-cells = <0>;
-        bindings = <&kp DE_LCBR>, <&kp N3>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    lkp_n4: left_parenthesis_kp_n4 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "left_parenthesis_kp_n4";
-        #binding-cells = <0>;
-        bindings = <&kp DE_LPRN>, <&kp N4>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    akp_n5: amps_kp_n5 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "amps_kp_n5";
-        #binding-cells = <0>;
-        bindings = <&kp DE_AMPR>, <&kp N5>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    ekp_n6: equal_kp_n6 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "equal_kp_n6";
-        #binding-cells = <0>;
-        bindings = <&kp DE_EQL>, <&kp N6>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    rkp_n7: right_parenthesis_kp_n7 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "right_parenthesis_kp_n7";
-        #binding-cells = <0>;
-        bindings = <&kp DE_RPRN>, <&kp N7>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    rkp_n8: right_brace_kp_n8 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "right_brace_kp_n8";
-        #binding-cells = <0>;
-        bindings = <&kp DE_RCBR>, <&kp N8>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    rkp_n9: right_bracket_kp_n9 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "right_bracket_kp_n9";
-        #binding-cells = <0>;
-        bindings = <&kp DE_RBRC>, <&kp N9>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    skp_n0: star_kp_n0 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "star_kp_n0";
-        #binding-cells = <0>;
-        bindings = <&kp DE_ASTR>, <&kp N0>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     eprcnt: excl_prcnt {
@@ -166,11 +104,11 @@
 
     default_layer {
       bindings = <
-        &dtilde   &kp N1   &kp N2   &kp N3   &kp N4    &kp N5   &mo 1                                                                            &mo 3     &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &eprcnt
-        &kp TAB   &csemi   &comlt   &dotrt   &kp DE_P  &kp DE_Y &none                                                                            &kp PSCRN &kp DE_F &kp DE_G &kp DE_C &kp DE_R &kp DE_L &questsls
-        &kp ESC   &kp DE_A &kp DE_O &kp DE_E &kp DE_U  &kp DE_I &caps_word        &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL             &none     &kp DE_D &kp DE_H &kp DE_T &kp DE_N &kp DE_S &kp DE_MINS
-        &kp LSHFT &dquot   &kp DE_Q &kp DE_J &kp DE_K  &kp DE_X        &none      &none     &kp HOME &none &none &kp PG_UP &none     &none                 &kp DE_B &kp DE_M &kp DE_W &kp DE_V &kp DE_Z &kp RSHFT
-        &mo 2     &grvpipe &bkhash  &kp LEFT &kp RIGHT                 &lt 4 BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &lt 4 SPACE                    &kp UP   &kp DOWN &atcirc  &degeuro &mo 2
+        &dtilde   &kp N1   &kp N2   &kp N3   &kp N4    &kp N5   &mo 1                                                                           &mo 3     &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &eprcnt
+        &kp TAB   &csemi   &comlt   &dotrt   &kp DE_P  &kp DE_Y &none                                                                           &kp PSCRN &kp DE_F &kp DE_G &kp DE_C &kp DE_R &kp DE_L &questsls
+        &kp ESC   &kp DE_A &kp DE_O &kp DE_E &kp DE_U  &kp DE_I &caps_word       &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL             &none     &kp DE_D &kp DE_H &kp DE_T &kp DE_N &kp DE_S &kp DE_MINS
+        &kp LSHFT &dquot   &kp DE_Q &kp DE_J &kp DE_K  &kp DE_X        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none                 &kp DE_B &kp DE_M &kp DE_W &kp DE_V &kp DE_Z &kp RSHFT
+        &mo 2     &grvpipe &bkhash  &kp LEFT &kp RIGHT                 SYM_BSPC  &kp DEL   &kp END              &kp PG_DN &kp ENTER SYM_SPACE                      &kp UP   &kp DOWN &atcirc  &degeuro &mo 2
         >;
     };
     keypad {
