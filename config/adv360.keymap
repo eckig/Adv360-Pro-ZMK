@@ -70,7 +70,7 @@
         &kp TAB    &csemi   &comlt   &dotrt   &kp DE_P  &kp DE_Y &none                                                                            &kp PSCRN &kp DE_F &kp DE_G &kp DE_C &kp DE_R  &kp DE_L &questsls
         &kp ESC    &kp DE_A &kp DE_O &kp DE_E &kp DE_U  &kp DE_I &caps_word        &kp LCTRL &kp LALT &none &none &kp LGUI  &kp RCTRL             &none     &kp DE_D &kp DE_H &kp DE_T &kp DE_N  &kp DE_S &kp DE_MINS
         &kp LSHFT  &dquot   &kp DE_Q &kp DE_J &kp DE_K  &kp DE_X        &none      &none     &kp HOME &none &none &kp PG_UP &none     &none                 &kp DE_B &kp DE_M &kp DE_W &kp DE_V  &kp DE_Z &kp RSHFT
-        &mo 2      &none    &none  &kp LEFT &kp RIGHT                 &lt 4 BSPC &lt 1 DEL &kp END              &kp PG_DN &kp ENTER &lt 4 SPACE                      &kp UP   &kp DOWN &kp DE_AT &degeuro &mo 2
+        &mo 2      &none    &none  &kp LEFT &kp RIGHT                 &lt 4 BSPC &lt 1 DEL &kp END              &kp PG_DN &lt 4 ENTER &kp SPACE                      &kp UP   &kp DOWN &kp DE_AT &degeuro &mo 2
         >;
     };
     keypad {
