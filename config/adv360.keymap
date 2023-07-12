@@ -66,47 +66,47 @@
 
     default_layer {
       bindings = <
-        &kp DE_DLR &kp N1   &kp N2   &kp N3   &kp N4    &kp N5   &tog 1                                                                           &mo 3     &kp N6   &kp N7   &kp N8   &kp N9    &kp N0   &kp DE_EXLM
-        &kp TAB    &csemi   &comlt   &dotrt   &kp DE_P  &kp DE_Y &none                                                                            &kp PSCRN &kp DE_F &kp DE_G &kp DE_C &kp DE_R  &kp DE_L &questsls
-        &kp ESC    &kp DE_A &kp DE_O &kp DE_E &kp DE_U  &kp DE_I &caps_word        &kp LCTRL &kp LALT &none &none &kp LGUI  &kp RCTRL             &none     &kp DE_D &kp DE_H &kp DE_T &kp DE_N  &kp DE_S &kp DE_MINS
-        &kp LSHFT  &dquot   &kp DE_Q &kp DE_J &kp DE_K  &kp DE_X        &none      &none     &kp HOME &none &none &kp PG_UP &none     &none                 &kp DE_B &kp DE_M &kp DE_W &kp DE_V  &kp DE_Z &kp RSHFT
-        &mo 2      &none    &none  &kp LEFT &kp RIGHT                 &lt 4 BSPC &lt 1 DEL &kp END              &kp PG_DN &lt 4 ENTER &kp SPACE                      &kp UP   &kp DOWN &kp DE_AT &degeuro &mo 2
+        &kp DE_DLR &kp N1   &kp N2   &kp N3   &kp N4    &kp N5   &tog 1                                                                         &mo 3     &kp N6   &kp N7   &kp N8   &kp N9    &kp N0   &kp DE_EXLM
+        &kp TAB    &csemi   &comlt   &dotrt   &kp DE_P  &kp DE_Y &none                                                                          &kp PSCRN &kp DE_F &kp DE_G &kp DE_C &kp DE_R  &kp DE_L &questsls
+        &kp ESC    &kp DE_A &kp DE_O &kp DE_E &kp DE_U  &kp DE_I &caps_word        &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL                       &none     &kp DE_D &kp DE_H &kp DE_T &kp DE_N  &kp DE_S &kp DE_MINS
+        &kp LSHFT  &dquot   &kp DE_Q &kp DE_J &kp DE_K  &kp DE_X                             &kp HOME &kp PG_UP                                           &kp DE_B &kp DE_M &kp DE_W &kp DE_V  &kp DE_Z &kp RSHFT
+        &mo 2      &none    &none    &kp LEFT &kp RIGHT                 &lt 4 BSPC &lt 1 DEL &kp END  &kp PG_DN &lt 4 ENTER &kp SPACE                              &kp UP   &kp DOWN &kp DE_AT &degeuro &mo 2
         >;
     };
     keypad {
       bindings = <
-        &trans &trans &trans &trans &trans &trans &trans                                                       &mo 3 &trans &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans
-        &trans &trans &trans &trans &trans &trans &none                                                        &none &trans &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &trans
-        &trans &trans &trans &trans &trans &trans &none         &trans &trans &none &none &trans &trans        &none &trans &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &trans
-        &trans &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none        &trans &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &kp KP_N0           &trans     &trans       &trans        &trans          &mo 2
+        &trans &trans &trans &trans &trans &trans &trans                                           &mo 3 &trans &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans
+        &trans &trans &trans &trans &trans &trans &none                                            &none &trans &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &trans
+        &trans &trans &trans &trans &trans &trans &none         &trans &trans &trans &trans        &none &trans &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &trans
+        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp KP_N0           &trans     &trans       &trans        &trans          &mo 2
       >;
     };
     fn {
       bindings = <
-        &kp F12 &kp F1    &kp F2    &kp F3 &kp F4    &kp F5 &trans                                                       &trans &kp F6 &kp F7 &kp F8 &kp F9  &kp F10   &kp F11
-        &trans  &trans    &trans    &trans &trans    &trans &none                                                        &none  &trans &trans &trans &trans  &trans    &trans
-        &trans  &kp DE_AE &kp DE_OE &trans &kp DE_UE &trans &none         &trans &trans &none &none &trans &trans        &none  &trans &trans &trans &trans  &kp DE_SS &trans
-        &trans  &trans    &trans    &trans &trans    &trans        &none  &none  &trans &none &none &trans &none  &none         &trans &trans &trans &trans  &trans    &trans
-        &trans  &trans    &trans    &trans &trans                  &trans &trans &trans             &trans &trans &trans               &trans &trans &trans  &trans    &trans
+        &kp F12 &kp F1    &kp F2    &kp F3 &kp F4    &kp F5 &trans                                           &trans &kp F6 &kp F7 &kp F8 &kp F9  &kp F10   &kp F11
+        &trans  &trans    &trans    &trans &trans    &trans &none                                            &none  &trans &trans &trans &trans  &trans    &trans
+        &trans  &kp DE_AE &kp DE_OE &trans &kp DE_UE &trans &none         &trans &trans &trans &trans        &none  &trans &trans &trans &trans  &kp DE_SS &trans
+        &trans  &trans    &trans    &trans &trans    &trans                      &trans &trans                      &trans &trans &trans &trans  &trans    &trans
+        &trans  &trans    &trans    &trans &trans                  &trans &trans &trans &trans &trans &trans               &trans &trans &trans  &trans    &trans
       >;
     };
     mod {
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                       &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                                                 &bootloader            &none        &none        &none        &none        &none        &none
-        &none &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5      &bt BT_CLR &bt BT_CLR &none &none &bt BT_CLR &bt BT_CLR         &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
-        &none &none        &none        &none        &none        &none                    &none           &none      &none      &none &none &none      &none      &none                          &none        &none        &none        &none        &none        &none
-        &none &none        &none        &bl BL_INC   &bl BL_DEC                            &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                             &bl BL_INC   &bl BL_DEC   &none        &none        &none
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none        &none        &none        &none &none &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                               &bootloader            &none        &none        &none        &none &none &none
+        &none &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none &none &none
+        &none &none        &none        &none        &none        &none                                      &none &none                                                        &none        &none        &none        &none &none &none
+        &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
       >;
     };
     layer_symbol {
       bindings = <
-        &trans &trans      &trans      &trans      &trans      &trans      &trans                                                        &trans &trans      &trans      &trans      &trans      &trans    &trans
-        &trans &kp DE_QUOT &kp DE_LABK &kp DE_RABK &kp DE_DQUO &kp DE_DOT  &trans                                                        &trans &kp DE_AMPR &kp DE_LBRC &kp DE_RBRC &kp DE_SS   &kp DE_AE &trans
-        &trans &kp DE_EXLM &kp DE_MINS &kp DE_PLUS &kp DE_EQL  &kp DE_HASH &trans        &trans &trans &none &trans &trans &trans        &trans &kp DE_PIPE &kp DE_LPRN &kp DE_RPRN &kp DE_QUES &kp DE_OE &trans
-        &trans &kp DE_CIRC &kp DE_SLSH &kp DE_ASTR &kp DE_BSLS &kp DE_GRV         &trans &trans &none  &none &trans &trans &trans &trans        &kp DE_TILD &kp DE_LCBR &kp DE_RCBR &kp DE_PERC &kp DE_UE &trans
-        &trans &trans      &trans      &trans      &trans                         &trans &trans &trans              &trans &trans &trans                    &trans      &trans      &trans      &trans    &trans
+        &trans &trans      &trans      &trans      &trans      &trans      &trans                                           &trans &trans      &trans      &trans      &trans      &trans    &trans
+        &trans &kp DE_QUOT &kp DE_LABK &kp DE_RABK &kp DE_DQUO &kp DE_DOT  &trans                                           &trans &kp DE_AMPR &kp DE_LBRC &kp DE_RBRC &kp DE_SS   &kp DE_AE &trans
+        &trans &kp DE_EXLM &kp DE_MINS &kp DE_PLUS &kp DE_EQL  &kp DE_HASH &trans        &trans &trans &trans &trans        &trans &kp DE_PIPE &kp DE_LPRN &kp DE_RPRN &kp DE_QUES &kp DE_OE &trans
+        &trans &kp DE_CIRC &kp DE_SLSH &kp DE_ASTR &kp DE_BSLS &kp DE_GRV                       &none  &trans                      &kp DE_TILD &kp DE_LCBR &kp DE_RCBR &kp DE_PERC &kp DE_UE &trans
+        &trans &trans      &trans      &trans      &trans                         &trans &trans &trans &trans &trans &trans                    &trans      &trans      &trans      &trans    &trans
         >;
     };
   };
